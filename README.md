@@ -54,7 +54,8 @@ Here's the breakdown of the top Data Analyst jobs in 2023:
 - A significant number of jobs were posted in mid-to-late 2023, suggesting a steady demand for data professionals.
 - Data analysis and leadership roles remain in high demand, with positions posted throughout 2023.
 
-
+![Top Paying Roles](project_sql\Assets\average_salary_distribution_top10.png)
+*Bar graph visualizing the salaries from the top 10 Data Analyst roles created through LibreOffice Calc.
 
 ### 2. Skills required for these top-paying jobs
 3. What skills are most in-demand for data analysts?
