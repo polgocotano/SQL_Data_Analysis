@@ -23,7 +23,7 @@ To dive into the Data Analyst job market, I've learned to use the following tool
 - **Postgres** - the chosen database management system, ideal for handling job posting data.
 - **Visual Studio Code** - code editor for executing SQL queries.
 - **Github / Git** - for version control and for sharing the SQL queries and analysis online.
-- **Power BI** - desktop application to create visual insights through the use of graphs.
+- **Power BI** - a desktop application that can create visualizations such as graphs.
 
 
 # The Analysis
@@ -99,9 +99,60 @@ Here's the breakdown of the skills required for these top paying jobs:
 
 
 
-3. What skills are most in-demand for data analysts?
-4. Which skills are associated with higher salaries?
-5. What are the most optimal skills to learn?
+## 3. Top 5 skills most in-demand for data analysts
+To identify the skills across all the Data Analyst job postings, I joined the job postings with the skills job and the skills table, grouping the results by skill name.
+
+```sql
+select
+    skills_dim.skills,
+    count(*) as total
+from job_postings_fact
+inner join skills_job_dim on job_postings_fact.job_id=skills_job_dim.job_id
+inner join skills_dim on skills_dim.skill_id=skills_job_dim.skill_id
+where job_title_short = 'Data Analyst'
+group by skills_dim.skills
+order by total DESC
+limit 5;
+```
+
+| Skills   | Total  |
+|----------|--------|
+| SQL      | 92,628 |
+| Excel    | 67,031 |
+| Python   | 57,326 |
+| Tableau  | 46,554 |
+| Power BI | 39,468 |
+
+
+
+## 4. Skills that are associated with higher salaries
+To identify the skills associated with higher salaries, I filtered Data Analyst positions from all locations offering remote jobs that includes salary information. Results were grouped by skills and the yearly salary averaged.
+
+```sql
+SELECT
+    skills_dim.skills,
+    round(avg(salary_year_avg),0) as avg_skill_salary
+from job_postings_fact
+inner join skills_job_dim on job_postings_fact.job_id=skills_job_dim.job_id
+inner join skills_dim on skills_dim.skill_id=skills_job_dim.skill_id
+where job_postings_fact.job_title_short = 'Data Analyst' 
+    and job_postings_fact.salary_year_avg is not NULL
+    and job_postings_fact.job_work_from_home = TRUE
+group by skills_dim.skills
+order by avg_skill_salary DESC
+limit 25;
+```
+
+Based on the salary data, several key trends emerge regarding the highest-paying skills for data analysts:
+
+- Advanced Tools & Programming Languages: Higher salaries are associated with specialized data processing tools (e.g., PySpark, DataRobot) and programming languages (e.g., Bitbucket, Swift).
+- Data Processing & Analysis Skills: Proficiency in data analysis libraries (e.g., Pandas, Jupyter) and version control systems (e.g., GitLab, Bitbucket) is well-compensated.
+- Big Data, Cloud Platforms, & Database Management: Knowledge of big data platforms (e.g., Databricks), cloud platforms (e.g., GCP), and database management systems (e.g., Couchbase, PostgreSQL) leads to competitive salaries.
+
+![Top Paying Roles](project_sql\Assets\skills_associated_high_salary.png)
+
+
+## 5. Most optimal skills to learn as a Data Analyst
 
 # Insights and Learnings
 # Conclusion 
