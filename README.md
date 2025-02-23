@@ -23,6 +23,8 @@ To dive into the Data Analyst job market, I've learned to use the following tool
 - **Postgres** - the chosen database management system, ideal for handling job posting data.
 - **Visual Studio Code** - code editor for executing SQL queries.
 - **Github / Git** - for version control and for sharing the SQL queries and analysis online.
+- **Google Sheets** - web-based spreadsheet to visual insights through the use of graphs.
+
 
 # The Analysis
 Each query for this project aimed at investigating specific aspects of the Data Analyst job market.  Here's how the following questions were approached:
@@ -54,10 +56,41 @@ Here's the breakdown of the top Data Analyst jobs in 2023:
 - A significant number of jobs were posted in mid-to-late 2023, suggesting a steady demand for data professionals.
 - Data analysis and leadership roles remain in high demand, with positions posted throughout 2023.
 
-![Top Paying Roles](project_sql\Assets\average_salary_distribution_top10.png)
-*Bar graph visualizing the salaries from the top 10 Data Analyst roles created through LibreOffice Calc.
+![Top Paying Roles](project_sql\Assets\salary_top_10_jops.png)
+*Bar graph visualizing the salaries from the top 10 Data Analyst roles created through Google Sheets.
 
 ### 2. Skills required for these top-paying jobs
+To identify the skills associated with the top paying jobs for Data Analytics in 2023, I joined the job postings with the skills data, providing insights as to what employers value for high compensation roles. 
+
+```sql
+with top_jobs as (
+    select 
+        job_id,
+        name as company_name,
+        job_location,
+        salary_year_avg
+    from job_postings_fact
+    left JOIN company_dim ON job_postings_fact.company_id=company_dim.company_id
+    where 
+        job_title_short = 'Data Analyst' AND
+        job_location = 'Anywhere' AND
+        salary_year_avg is not null
+    order by salary_year_avg DESC
+    limit 10
+)
+
+select
+    top_jobs.*,
+    skills_dim.skills
+from top_jobs
+inner join skills_job_dim on top_jobs.job_id=skills_job_dim.job_id
+inner join skills_dim on skills_dim.skill_id=skills_job_dim.skill_id
+order by salary_year_avg DESC
+```
+
+
+
+
 3. What skills are most in-demand for data analysts?
 4. Which skills are associated with higher salaries?
 5. What are the most optimal skills to learn?
