@@ -23,7 +23,7 @@ To dive into the Data Analyst job market, I've learned to use the following tool
 - **Postgres** - the chosen database management system, ideal for handling job posting data.
 - **Visual Studio Code** - code editor for executing SQL queries.
 - **Github / Git** - for version control and for sharing the SQL queries and analysis online.
-- **Google Sheets** - web-based spreadsheet to create visual insights through the use of graphs.
+- **Power BI** - desktop application to create visual insights through the use of graphs.
 
 
 # The Analysis
@@ -57,7 +57,7 @@ Here's the breakdown of the top Data Analyst jobs in 2023:
 - Data analysis and leadership roles remain in high demand, with positions posted throughout 2023.
 
 ![Top Paying Roles](project_sql\Assets\salary_top_10_jobs.png)
-*Bar graph visualizing the salaries from the top 10 Data Analyst roles created through LibreOffice Calc.
+*Bar graph visualizing the salaries from the top 10 Data Analyst roles created through Power BI.
 
 ### 2. Skills required for these top-paying jobs
 To identify the skills associated with the top paying jobs for Data Analytics in 2023, I joined the job postings with the skills data, providing insights as to what employers value for high compensation roles. 
