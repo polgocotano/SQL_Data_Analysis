@@ -153,6 +153,43 @@ Based on the salary data, several key trends emerge regarding the highest-paying
 
 
 ## 5. Most optimal skills to learn as a Data Analyst
+Combining insights from demanded skills and salary data, this query shows skills that are both in high demand and high salary, offering a strategic focus for skill development.
 
-# Insights and Learnings
-# Conclusion 
+| skill_id | skills     | demand_count | avg_skill_salary |
+|----------|------------|--------------|------------------|
+| 8        | Go         | 27           | 115320           |
+| 234      | Confluence | 11           | 114210           |
+| 97       | Hadoop     | 22           | 113193           |
+| 80       | Snowflake  | 37           | 112948           |
+| 74       | Azure      | 34           | 111225           |
+| 77       | Bigquery   | 13           | 109654           |
+| 76       | Aws        | 32           | 108317           |
+| 4        | Java       | 17           | 106906           |
+| 194      | Ssis       | 12           | 106683           |
+| 233      | Jira       | 20           | 104918           |
+| 79       | Oracle     | 37           | 104534           |
+| 185      | Looker     | 49           | 103795           |
+| 2        | Nosql      | 13           | 101414           |
+| 1        | Python     | 236          | 101397           |
+| 5        | R          | 148          | 100499           |
+
+Here'sa breakdown of the optimal skills for Data Analysts in 2023.
+- High Demand, High Salary: Go, Snowflake, Azure. These skills have both high demand and salaries, indicating strong market value.
+- High Demand, Moderate Salary: Python, R, Looker. These skills are highly in demand but have moderate salaries, possibly due to widespread use and availability of skilled professionals.
+- Low Demand, High Salary: Confluence, Bigquery, SSIS. These skills have lower demand but command high salaries, suggesting they are specialized and less common.
+- Moderate Demand, Competitive Salary: Java, Jira, Hadoop. These skills have moderate demand and competitive salaries, reflecting their stable market presence.
+
+Overall, skills like Python and R are extremely popular, while specialized skills like Go and Confluence command higher salaries. Balancing market demand with salary potential can help guide career decisions effectively.
+
+# Learnings gained from this project
+
+Throughout this project, I've enhanced my SQL skills and learned to use other applications to add in my toolkit as a future Data Analyst.
+
+- **Intermediate to advance query crafting:** creating advance SQL queries, merging up to three tables using join statements, utilizing with clauses to create temporary tables.
+
+- **Data Aggregation:** comfortably utilizing count() and avg() along with group by to summarize data.
+
+- **Data analysis:** developed problem solving skills, turning questions into actionable and insightful queries.
+
+# Closing Thoughts
+This project enhanced by SQL skills, learned how to use Visual Studio Code along with Postgres, as well as Github/Git to make this project available online for collaboration purposes. It also helped me gain insight into the Data Analyst job market, gaining knowledge on the skills to learn which are in high demand and offers high salary. This exploration shows the importance of continuous learning and adaptation to emerging trends in the field of data analytics.
