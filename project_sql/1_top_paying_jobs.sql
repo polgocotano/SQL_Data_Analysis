@@ -17,7 +17,7 @@ from job_postings_fact
 left JOIN company_dim ON job_postings_fact.company_id=company_dim.company_id
 where 
     job_title_short = 'Data Analyst' AND
-    job_location like '%New Zealand%' AND
+    job_location = 'Anywhere' AND
     salary_year_avg is not null
 order by salary_year_avg DESC
 limit 10;
