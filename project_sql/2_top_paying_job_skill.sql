@@ -35,8 +35,9 @@ order by salary_year_avg DESC
 
 /*
 Breakdown of the most demanded skills for data analyst in 2023, based on job postings:
-SQL is the most in-demand skill, appearing in 5 job postings.
-Python, R, and Jupyter are also highly sought after, each appearing 4 times.
-Power BI, Spark, and AWS have moderate demand, showing up in 2–3 postings.
-Tableau and Snowflake appear less frequently, indicating they are required for fewer roles.
-A mix of programming, cloud, and BI tools is essential for top-paying data analyst roles.
+- SQL is the most in-demand skill, appearing in 8 job postings.
+- Python, Tableau, and R are also highly sought after, each appearing at 4-7 times.
+- Excel, Pandas, and Snowflake have moderate demand, showing up in 3 job postings.
+- AWS, Azure, Power Bi, Jupyter appear less frequently, indicating they are required for fewer roles.
+- A mix of programming, cloud, and BI tools is essential for top-paying data analyst roles.
+*/

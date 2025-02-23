@@ -57,7 +57,7 @@ Here's the breakdown of the top Data Analyst jobs in 2023:
 - Data analysis and leadership roles remain in high demand, with positions posted throughout 2023.
 
 ![Top Paying Roles](project_sql\Assets\salary_top_10_jobs.png)
-*Bar graph visualizing the salaries from the top 10 Data Analyst roles created through Power BI.
+
 
 ### 2. Skills required for these top-paying jobs
 To identify the skills associated with the top paying jobs for Data Analytics in 2023, I joined the job postings with the skills data, providing insights as to what employers value for high compensation roles. 
@@ -88,13 +88,15 @@ inner join skills_dim on skills_dim.skill_id=skills_job_dim.skill_id
 order by salary_year_avg DESC
 ```
 
-Here's the breakdown of the top Data Analyst jobs in 2023:
-- Director and senior roles command higher salaries, while analyst roles have a wide salary range between $184,000 to $650,000.
-- A significant number of jobs were posted in mid-to-late 2023, suggesting a steady demand for data professionals.
-- Data analysis and leadership roles remain in high demand, with positions posted throughout 2023.
+Here's the breakdown of the skills required for these top paying jobs:
+- SQL is the most in-demand skill, appearing in 8 job postings.
+- Python, Tableau, and R are also highly sought after, each appearing at 4-7 times.
+- Excel, Pandas, and Snowflake have moderate demand, showing up in 3 job postings.
+- AWS, Azure, Power Bi, Jupyter appear less frequently, indicating they are required for fewer roles.
+- A mix of programming, cloud, and BI tools is essential for top-paying data analyst roles.
 
 ![Skills from Top Paying Roles](project_sql\Assets\top_paying_skills.png)
-*Bar graph visualizing the salaries from the top 10 Data Analyst roles created through LibreOffice Calc.
+
 
 
 3. What skills are most in-demand for data analysts?
