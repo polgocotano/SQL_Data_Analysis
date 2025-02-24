@@ -26,6 +26,13 @@ To dive into the Data Analyst job market, I've learned to use the following tool
 - **Power BI** - a desktop application that can create visualizations such as graphs.
 
 
+# Insights
+- **Top paying Data Analyst jobs** -  Director and senior roles command higher salaries, while analyst roles that offer remote work have a wide salary range with the highest at $650,000.
+- **Skills for top-paying jobs** - High paying Data Analyst jobs require profiency in SQL, suggesting it's an important skill for earning a high salary.
+- **In-demand skills for Data Analysts** - SQL is the most in-demand skill in the data analyst market, further emphasizing it's importance for job seekers.
+- **Skills associated with higher salaries** - Higher salaries are associated with specialized data processing tools and programming languages. Proficiency in data analysis libraries and version control systems is well-compensated.
+- **Optimal skills for job market value** - Skills like Python and R are extremely popular, while specialized skills like Go and Confluence command higher salaries. Balancing market demand with salary potential can help guide career decisions effectively.
+
 # The Analysis
 Each query for this project aimed at investigating specific aspects of the Data Analyst job market.  Here's how the following questions were approached:
 
